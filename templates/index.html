@@ -10,331 +10,380 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         body {
-            background: #140f0b;
-            color: #fff7ed;
+            background: #fff7fb;
+            color: #344054;
         }
 
         header {
-            position: fixed;
-            top: 0;
             width: 100%;
-            z-index: 100;
-            padding: 22px 8%;
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(20, 15, 11, 0.85);
+            background: rgba(255, 255, 255, 0.82);
             backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #f3d9e8;
         }
 
         .logo {
             font-size: 26px;
             font-weight: 900;
-            color: #fb923c;
+            color: #b76e9f;
         }
 
         nav a {
-            color: #fed7aa;
             text-decoration: none;
-            margin-left: 18px;
+            color: #7a6f86;
+            margin-left: 16px;
             padding: 10px 18px;
-            border-radius: 14px;
+            border-radius: 999px;
             font-weight: 800;
         }
 
         nav a.active {
-            background: #fb923c;
-            color: #1c1917;
-        }
-
-        .hero {
-            min-height: 100vh;
-            padding: 140px 8% 80px;
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 60px;
-            align-items: center;
-            background:
-                radial-gradient(circle at top left, rgba(251, 146, 60, 0.28), transparent 35%),
-                radial-gradient(circle at bottom right, rgba(234, 88, 12, 0.25), transparent 35%),
-                #140f0b;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 10px 18px;
-            background: rgba(251, 146, 60, 0.15);
-            border: 1px solid rgba(251, 146, 60, 0.45);
-            border-radius: 999px;
-            color: #fdba74;
-            font-weight: 900;
-            margin-bottom: 24px;
-        }
-
-        .hero h1 {
-            font-size: 64px;
-            line-height: 1.05;
-            margin-bottom: 24px;
-        }
-
-        .hero p {
-            color: #fed7aa;
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 34px;
+            background: #f8c8dc;
+            color: #7c2d5a;
         }
 
         .btn {
             display: inline-block;
+            text-decoration: none;
             border: none;
             cursor: pointer;
-            text-decoration: none;
-            background: linear-gradient(135deg, #fb923c, #ea580c);
-            color: #1c1917;
-            padding: 16px 32px;
-            border-radius: 16px;
+            background: linear-gradient(135deg, #f8c8dc, #c7d2fe);
+            color: #5b315d;
+            padding: 15px 30px;
+            border-radius: 999px;
             font-weight: 900;
             font-size: 16px;
-            box-shadow: 0 18px 45px rgba(251, 146, 60, 0.28);
+            box-shadow: 0 14px 35px rgba(183, 110, 159, 0.22);
         }
 
-        .hero-panel {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 34px;
-            padding: 34px;
-            backdrop-filter: blur(18px);
-        }
-
-        .panel-title {
-            font-size: 28px;
-            margin-bottom: 24px;
-        }
-
-        .feature {
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 22px;
-            padding: 22px;
-            margin-bottom: 18px;
-            border-left: 5px solid #fb923c;
-        }
-
-        .feature h3 {
-            color: #fdba74;
-            margin-bottom: 8px;
-        }
-
-        .feature p {
-            color: #ffedd5;
-            font-size: 15px;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .main {
+        /* HOME */
+        .home {
             min-height: 100vh;
-            padding: 130px 8% 80px;
-            background: #fff7ed;
-            color: #1c1917;
+            padding: 145px 8% 80px;
+            background:
+                radial-gradient(circle at 10% 20%, #ffe4ef 0, transparent 30%),
+                radial-gradient(circle at 90% 15%, #dbeafe 0, transparent 28%),
+                radial-gradient(circle at 50% 90%, #dcfce7 0, transparent 30%),
+                #fff7fb;
         }
 
-        .layout {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 34px;
-            align-items: start;
+        .hero-center {
+            text-align: center;
+            max-width: 920px;
+            margin: 0 auto 55px;
         }
 
-        .info-side {
-            background: #1c1917;
-            color: white;
-            padding: 36px;
-            border-radius: 30px;
-            position: sticky;
-            top: 110px;
+        .badge {
+            display: inline-block;
+            background: #fce7f3;
+            color: #9d4b7d;
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-weight: 900;
+            margin-bottom: 22px;
         }
 
-        .info-side h1 {
-            font-size: 38px;
-            line-height: 1.15;
-            margin-bottom: 18px;
+        .hero-center h1 {
+            font-size: 62px;
+            line-height: 1.08;
+            color: #42314d;
+            margin-bottom: 22px;
         }
 
-        .info-side p {
-            color: #fed7aa;
+        .hero-center p {
+            font-size: 18px;
             line-height: 1.8;
+            color: #74677e;
+            margin-bottom: 34px;
         }
 
-        .rule-box {
-            margin-top: 28px;
-            background: rgba(251, 146, 60, 0.14);
-            border: 1px solid rgba(251, 146, 60, 0.35);
-            padding: 22px;
-            border-radius: 22px;
+        .floating-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+            max-width: 1100px;
+            margin: auto;
         }
 
-        .rule-box h3 {
-            color: #fdba74;
+        .float-card {
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid #f3d9e8;
+            border-radius: 32px;
+            padding: 30px;
+            min-height: 230px;
+            box-shadow: 0 22px 60px rgba(142, 91, 128, 0.12);
+            transition: 0.25s;
+        }
+
+        .float-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .float-card:nth-child(2) {
+            transform: translateY(34px);
+        }
+
+        .float-card:nth-child(2):hover {
+            transform: translateY(24px);
+        }
+
+        .icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 20px;
+            display: grid;
+            place-items: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            background: #eef2ff;
+        }
+
+        .float-card h3 {
+            font-size: 22px;
+            color: #7c2d5a;
             margin-bottom: 12px;
         }
 
-        .rule-box ul {
-            padding-left: 20px;
-            color: #ffedd5;
-            line-height: 1.8;
-        }
-
-        .form-box {
-            background: white;
-            padding: 38px;
-            border-radius: 30px;
-            box-shadow: 0 25px 70px rgba(28, 25, 23, 0.14);
-        }
-
-        .form-box h2 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
-
-        .form-box .sub {
-            color: #78716c;
+        .float-card p {
+            color: #74677e;
             line-height: 1.7;
+        }
+
+        /* CONSULTATION */
+        .consult {
+            min-height: 100vh;
+            padding: 130px 8% 80px;
+            background:
+                linear-gradient(135deg, #fff7fb, #f8fafc);
+        }
+
+        .page-head {
+            max-width: 980px;
+            margin: 0 auto 36px;
+            text-align: center;
+        }
+
+        .page-head h1 {
+            font-size: 44px;
+            color: #42314d;
+            margin-bottom: 14px;
+        }
+
+        .page-head p {
+            color: #74677e;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .steps {
+            max-width: 1050px;
+            margin: 0 auto 34px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .step {
+            background: white;
+            border: 1px solid #eadcf5;
+            padding: 22px;
+            border-radius: 26px;
+            box-shadow: 0 16px 45px rgba(142, 91, 128, 0.10);
+        }
+
+        .step span {
+            display: inline-block;
+            background: #ede9fe;
+            color: #7c3aed;
+            padding: 8px 13px;
+            border-radius: 999px;
+            font-weight: 900;
+            margin-bottom: 14px;
+        }
+
+        .step h3 {
+            color: #7c2d5a;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: #74677e;
+            line-height: 1.6;
+        }
+
+        .consult-card {
+            max-width: 1050px;
+            margin: auto;
+            background: white;
+            border-radius: 36px;
+            padding: 38px;
+            border: 1px solid #f3d9e8;
+            box-shadow: 0 25px 70px rgba(142, 91, 128, 0.14);
+        }
+
+        .form-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
             margin-bottom: 30px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #f3d9e8;
+        }
+
+        .form-title h2 {
+            font-size: 32px;
+            color: #42314d;
+        }
+
+        .form-title p {
+            color: #74677e;
+            line-height: 1.7;
         }
 
         .form-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 18px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
         }
 
         .form-row {
-            background: #fff7ed;
-            padding: 18px;
-            border-radius: 20px;
-            border: 1px solid #fed7aa;
+            background: #fff7fb;
+            border: 1px solid #f3d9e8;
+            border-radius: 24px;
+            padding: 20px;
         }
 
         label {
             display: block;
             font-weight: 900;
+            color: #5b315d;
             margin-bottom: 10px;
-            color: #292524;
         }
 
         select {
             width: 100%;
             padding: 15px;
-            border: 1px solid #fdba74;
-            border-radius: 14px;
+            border-radius: 16px;
+            border: 1px solid #e9c6dd;
             background: white;
+            color: #42314d;
             font-size: 15px;
-            color: #292524;
         }
 
         select:focus {
             outline: none;
-            border-color: #ea580c;
-            box-shadow: 0 0 0 4px rgba(251, 146, 60, 0.22);
+            border-color: #c084fc;
+            box-shadow: 0 0 0 4px rgba(192, 132, 252, 0.16);
         }
 
         button.btn {
-            margin-top: 24px;
             width: 100%;
+            margin-top: 28px;
+            border-radius: 20px;
         }
 
+        /* RESULT */
         .result {
-            margin-top: 34px;
+            max-width: 1050px;
+            margin: 40px auto 0;
         }
 
-        .result-header {
-            background: linear-gradient(135deg, #1c1917, #431407);
-            color: white;
+        .result-banner {
+            background: linear-gradient(135deg, #f8c8dc, #c7d2fe, #bbf7d0);
             padding: 30px;
-            border-radius: 28px;
-            margin-bottom: 22px;
+            border-radius: 32px;
+            color: #42314d;
+            margin-bottom: 24px;
         }
 
-        .result-header h2 {
+        .result-banner h2 {
             font-size: 30px;
-            color: #fdba74;
             margin-bottom: 8px;
         }
 
-        .cards {
+        .result-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 18px;
         }
 
-        .card {
+        .result-card {
             background: white;
-            border-radius: 24px;
-            padding: 26px;
-            border: 1px solid #fed7aa;
-            box-shadow: 0 18px 45px rgba(28, 25, 23, 0.08);
+            border-radius: 28px;
+            padding: 24px;
+            border: 1px solid #f3d9e8;
+            box-shadow: 0 18px 50px rgba(142, 91, 128, 0.10);
         }
 
-        .card h3 {
-            color: #ea580c;
+        .result-card h3 {
+            color: #7c2d5a;
             margin-bottom: 12px;
-            font-size: 21px;
+            font-size: 19px;
         }
 
-        .card p {
-            color: #57534e;
+        .result-card p {
+            color: #74677e;
             line-height: 1.7;
         }
 
         .reason {
-            background: #1c1917;
-            color: white;
-            padding: 30px;
-            border-radius: 26px;
             margin-top: 22px;
+            background: #f5f3ff;
+            border: 1px solid #ddd6fe;
+            padding: 30px;
+            border-radius: 30px;
         }
 
         .reason h3 {
-            color: #fdba74;
+            color: #6d28d9;
             margin-bottom: 16px;
         }
 
         .reason ul {
             padding-left: 22px;
-            color: #ffedd5;
+            color: #5f5270;
             line-height: 1.8;
         }
 
         footer {
             text-align: center;
             padding: 24px;
-            background: #140f0b;
-            color: #fed7aa;
+            background: #fff;
+            color: #8b7b96;
+            border-top: 1px solid #f3d9e8;
         }
 
         @media(max-width: 900px) {
 
-            .hero,
-            .layout,
-            .cards {
+            .floating-grid,
+            .steps,
+            .form-grid,
+            .result-grid {
                 grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 42px;
+            .hero-center h1 {
+                font-size: 40px;
             }
 
-            .info-side {
-                position: static;
+            .float-card:nth-child(2) {
+                transform: none;
             }
 
-            header {
-                padding: 18px 5%;
+            .form-title {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
@@ -351,165 +400,171 @@
     </header>
 
     {% if page == 'home' %}
-    <section class="hero">
-        <div>
-            <span class="badge">Rule-Based Expert System</span>
-            <h1>Rekomendasi Menu dan Olahraga Harian</h1>
+    <section class="home">
+        <div class="hero-center">
+            <span class="badge">Sistem Pakar Berbasis Rule</span>
+            <h1>Rekomendasi Menu & Olahraga Harian</h1>
             <p>
-                Sistem pakar ini membantu menentukan menu makan dan olahraga harian berdasarkan
-                tujuan, kondisi tubuh, aktivitas, waktu olahraga, dan preferensi makanan.
+                Sistem ini membantu memberikan rekomendasi menu makan dan olahraga berdasarkan kondisi tubuh,
+                tujuan, aktivitas, waktu olahraga, dan preferensi makanan.
             </p>
             <a href="/konsultasi" class="btn">Mulai Konsultasi</a>
         </div>
 
-        <div class="hero-panel">
-            <h2 class="panel-title">Apa yang dianalisis?</h2>
-
-            <div class="feature">
-                <h3>Tujuan Pengguna</h3>
-                <p>Menurunkan berat, menjaga berat, atau menaikkan massa tubuh.</p>
+        <div class="floating-grid">
+            <div class="float-card">
+                <div class="icon">🥗</div>
+                <h3>Menu Harian</h3>
+                <p>Memberikan rekomendasi menu pagi, siang, dan malam berdasarkan kebutuhan pengguna.</p>
             </div>
 
-            <div class="feature">
-                <h3>Kondisi Tubuh</h3>
-                <p>Sistem membaca kondisi kurus, normal, atau berlebih sebagai dasar rekomendasi.</p>
+            <div class="float-card">
+                <div class="icon">🧠</div>
+                <h3>Rule IF–THEN</h3>
+                <p>Menggunakan basis pengetahuan sistem pakar untuk menentukan keputusan secara logis.</p>
             </div>
 
-            <div class="feature">
-                <h3>Preferensi Makanan</h3>
-                <p>Menu dapat disesuaikan menjadi hemat, normal, atau tinggi protein.</p>
+            <div class="float-card">
+                <div class="icon">🏃</div>
+                <h3>Olahraga Harian</h3>
+                <p>Memberikan saran aktivitas olahraga yang sesuai dengan waktu dan kondisi pengguna.</p>
             </div>
         </div>
     </section>
     {% endif %}
 
     {% if page == 'konsultasi' %}
-    <section class="main">
-        <div class="layout">
+    <section class="consult">
+        <div class="page-head">
+            <h1>Konsultasi Sistem Pakar</h1>
+            <p>
+                Isi data sesuai kondisi kamu. Sistem akan mencocokkan pilihan dengan aturan pakar
+                untuk menghasilkan rekomendasi menu dan olahraga harian.
+            </p>
+        </div>
 
-            <aside class="info-side">
-                <h1>Konsultasi Sistem Pakar</h1>
-                <p>
-                    Isi data sesuai kondisi. Sistem akan mencocokkan jawaban dengan basis aturan IF-THEN
-                    untuk menghasilkan rekomendasi menu makan dan olahraga.
-                </p>
+        <div class="steps">
+            <div class="step">
+                <span>01</span>
+                <h3>Input Kondisi</h3>
+                <p>Pilih tujuan, kondisi tubuh, aktivitas, waktu, dan preferensi makanan.</p>
+            </div>
+            <div class="step">
+                <span>02</span>
+                <h3>Rule Matching</h3>
+                <p>Sistem mencocokkan input dengan aturan IF–THEN yang tersedia.</p>
+            </div>
+            <div class="step">
+                <span>03</span>
+                <h3>Rekomendasi</h3>
+                <p>Sistem menampilkan menu, olahraga, dan alasan keputusan.</p>
+            </div>
+        </div>
 
-                <div class="rule-box">
-                    <h3>Contoh Rule</h3>
-                    <ul>
-                        <li>IF tujuan turun berat AND tubuh berlebih THEN menu rendah kalori</li>
-                        <li>IF tujuan naik massa AND tubuh kurus THEN menu tinggi protein</li>
-                        <li>IF aktivitas rendah THEN olahraga dimulai dari intensitas ringan</li>
-                    </ul>
-                </div>
-            </aside>
-
-            <div>
-                <div class="form-box">
+        <div class="consult-card">
+            <div class="form-title">
+                <div>
                     <h2>Form Konsultasi</h2>
-                    <p class="sub">
-                        Pilih kondisi yang paling sesuai. Hasil akan muncul setelah tombol proses ditekan.
-                    </p>
-
-                    <form method="POST">
-                        <div class="form-grid">
-                            <div class="form-row">
-                                <label>Tujuan</label>
-                                <select name="tujuan" required>
-                                    <option value="">-- Pilih Tujuan --</option>
-                                    <option value="turun_berat">Menurunkan Berat Badan</option>
-                                    <option value="jaga_berat">Menjaga Berat Badan</option>
-                                    <option value="naik_massa">Menaikkan Massa Tubuh/Otot</option>
-                                </select>
-                            </div>
-
-                            <div class="form-row">
-                                <label>Kondisi Tubuh</label>
-                                <select name="kondisi" required>
-                                    <option value="">-- Pilih Kondisi --</option>
-                                    <option value="kurus">Kurus</option>
-                                    <option value="normal">Normal</option>
-                                    <option value="berlebih">Berlebih</option>
-                                </select>
-                            </div>
-
-                            <div class="form-row">
-                                <label>Aktivitas Harian</label>
-                                <select name="aktivitas" required>
-                                    <option value="">-- Pilih Aktivitas --</option>
-                                    <option value="rendah">Rendah</option>
-                                    <option value="sedang">Sedang</option>
-                                    <option value="tinggi">Tinggi</option>
-                                </select>
-                            </div>
-
-                            <div class="form-row">
-                                <label>Waktu Olahraga</label>
-                                <select name="waktu" required>
-                                    <option value="">-- Pilih Waktu --</option>
-                                    <option value="sedikit">Sedikit (&lt; 20 menit)</option>
-                                    <option value="cukup">Cukup (20–45 menit)</option>
-                                    <option value="banyak">Banyak (&gt; 45 menit)</option>
-                                </select>
-                            </div>
-
-                            <div class="form-row">
-                                <label>Preferensi Makanan</label>
-                                <select name="preferensi" required>
-                                    <option value="">-- Pilih Preferensi --</option>
-                                    <option value="hemat">Hemat</option>
-                                    <option value="normal">Normal</option>
-                                    <option value="tinggi_protein">Tinggi Protein</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <button class="btn" type="submit">Proses Rekomendasi</button>
-                    </form>
+                    <p>Pilih jawaban paling sesuai. Jangan asal pilih, karena hasilnya mengikuti rule.</p>
                 </div>
-
-                {% if hasil %}
-                <div class="result">
-                    <div class="result-header">
-                        <h2>{{ hasil.kategori }}</h2>
-                        <p>Hasil rekomendasi berdasarkan basis pengetahuan sistem pakar.</p>
-                    </div>
-
-                    <div class="cards">
-                        <div class="card">
-                            <h3>Menu Pagi</h3>
-                            <p>{{ hasil.menu_pagi }}</p>
-                        </div>
-
-                        <div class="card">
-                            <h3>Menu Siang</h3>
-                            <p>{{ hasil.menu_siang }}</p>
-                        </div>
-
-                        <div class="card">
-                            <h3>Menu Malam</h3>
-                            <p>{{ hasil.menu_malam }}</p>
-                        </div>
-
-                        <div class="card">
-                            <h3>Olahraga Harian</h3>
-                            <p>{{ hasil.olahraga }}</p>
-                        </div>
-                    </div>
-
-                    <div class="reason">
-                        <h3>Alasan Sistem</h3>
-                        <ul>
-                            {% for item in hasil.alasan %}
-                            <li>{{ item }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                {% endif %}
             </div>
 
+            <form method="POST">
+                <div class="form-grid">
+                    <div class="form-row">
+                        <label>Tujuan</label>
+                        <select name="tujuan" required>
+                            <option value="">-- Pilih Tujuan --</option>
+                            <option value="turun_berat">Menurunkan Berat Badan</option>
+                            <option value="jaga_berat">Menjaga Berat Badan</option>
+                            <option value="naik_massa">Menaikkan Massa Tubuh/Otot</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Kondisi Tubuh</label>
+                        <select name="kondisi" required>
+                            <option value="">-- Pilih Kondisi --</option>
+                            <option value="kurus">Kurus</option>
+                            <option value="normal">Normal</option>
+                            <option value="berlebih">Berlebih</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Aktivitas Harian</label>
+                        <select name="aktivitas" required>
+                            <option value="">-- Pilih Aktivitas --</option>
+                            <option value="rendah">Rendah</option>
+                            <option value="sedang">Sedang</option>
+                            <option value="tinggi">Tinggi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Waktu Olahraga</label>
+                        <select name="waktu" required>
+                            <option value="">-- Pilih Waktu --</option>
+                            <option value="sedikit">Sedikit (&lt; 20 menit)</option>
+                            <option value="cukup">Cukup (20–45 menit)</option>
+                            <option value="banyak">Banyak (&gt; 45 menit)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Preferensi Makanan</label>
+                        <select name="preferensi" required>
+                            <option value="">-- Pilih Preferensi --</option>
+                            <option value="hemat">Hemat</option>
+                            <option value="normal">Normal</option>
+                            <option value="tinggi_protein">Tinggi Protein</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn" type="submit">Proses Rekomendasi</button>
+            </form>
         </div>
+
+        {% if hasil %}
+        <div class="result">
+            <div class="result-banner">
+                <h2>{{ hasil.kategori }}</h2>
+                <p>Hasil rekomendasi berdasarkan basis pengetahuan sistem pakar.</p>
+            </div>
+
+            <div class="result-grid">
+                <div class="result-card">
+                    <h3>Menu Pagi</h3>
+                    <p>{{ hasil.menu_pagi }}</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Menu Siang</h3>
+                    <p>{{ hasil.menu_siang }}</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Menu Malam</h3>
+                    <p>{{ hasil.menu_malam }}</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Olahraga</h3>
+                    <p>{{ hasil.olahraga }}</p>
+                </div>
+            </div>
+
+            <div class="reason">
+                <h3>Alasan Sistem</h3>
+                <ul>
+                    {% for item in hasil.alasan %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
     </section>
     {% endif %}
 
