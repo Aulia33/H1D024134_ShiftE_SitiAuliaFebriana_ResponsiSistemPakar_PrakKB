@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NutriMove Expert</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #140f0b;
+            color: #fff7ed;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(20, 15, 11, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            color: #fb923c;
+        }
+
+        nav a {
+            color: #fed7aa;
+            text-decoration: none;
+            margin-left: 18px;
+            padding: 10px 18px;
+            border-radius: 14px;
+            font-weight: 800;
+        }
+
+        nav a.active {
+            background: #fb923c;
+            color: #1c1917;
+        }
+
+        .hero {
+            min-height: 100vh;
+            padding: 140px 8% 80px;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 60px;
+            align-items: center;
+            background:
+                radial-gradient(circle at top left, rgba(251, 146, 60, 0.28), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(234, 88, 12, 0.25), transparent 35%),
+                #140f0b;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 10px 18px;
+            background: rgba(251, 146, 60, 0.15);
+            border: 1px solid rgba(251, 146, 60, 0.45);
+            border-radius: 999px;
+            color: #fdba74;
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            color: #fed7aa;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 34px;
+        }
+
+        .btn {
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            background: linear-gradient(135deg, #fb923c, #ea580c);
+            color: #1c1917;
+            padding: 16px 32px;
+            border-radius: 16px;
+            font-weight: 900;
+            font-size: 16px;
+            box-shadow: 0 18px 45px rgba(251, 146, 60, 0.28);
+        }
+
+        .hero-panel {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 34px;
+            padding: 34px;
+            backdrop-filter: blur(18px);
+        }
+
+        .panel-title {
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 22px;
+            padding: 22px;
+            margin-bottom: 18px;
+            border-left: 5px solid #fb923c;
+        }
+
+        .feature h3 {
+            color: #fdba74;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: #ffedd5;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .main {
+            min-height: 100vh;
+            padding: 130px 8% 80px;
+            background: #fff7ed;
+            color: #1c1917;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 34px;
+            align-items: start;
+        }
+
+        .info-side {
+            background: #1c1917;
+            color: white;
+            padding: 36px;
+            border-radius: 30px;
+            position: sticky;
+            top: 110px;
+        }
+
+        .info-side h1 {
+            font-size: 38px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .info-side p {
+            color: #fed7aa;
+            line-height: 1.8;
+        }
+
+        .rule-box {
+            margin-top: 28px;
+            background: rgba(251, 146, 60, 0.14);
+            border: 1px solid rgba(251, 146, 60, 0.35);
+            padding: 22px;
+            border-radius: 22px;
+        }
+
+        .rule-box h3 {
+            color: #fdba74;
+            margin-bottom: 12px;
+        }
+
+        .rule-box ul {
+            padding-left: 20px;
+            color: #ffedd5;
+            line-height: 1.8;
+        }
+
+        .form-box {
+            background: white;
+            padding: 38px;
+            border-radius: 30px;
+            box-shadow: 0 25px 70px rgba(28, 25, 23, 0.14);
+        }
+
+        .form-box h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .form-box .sub {
+            color: #78716c;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .form-row {
+            background: #fff7ed;
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid #fed7aa;
+        }
+
+        label {
+            display: block;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: #292524;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #fdba74;
+            border-radius: 14px;
+            background: white;
+            font-size: 15px;
+            color: #292524;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #ea580c;
+            box-shadow: 0 0 0 4px rgba(251, 146, 60, 0.22);
+        }
+
+        button.btn {
+            margin-top: 24px;
+            width: 100%;
+        }
+
+        .result {
+            margin-top: 34px;
+        }
+
+        .result-header {
+            background: linear-gradient(135deg, #1c1917, #431407);
+            color: white;
+            padding: 30px;
+            border-radius: 28px;
+            margin-bottom: 22px;
+        }
+
+        .result-header h2 {
+            font-size: 30px;
+            color: #fdba74;
+            margin-bottom: 8px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 26px;
+            border: 1px solid #fed7aa;
+            box-shadow: 0 18px 45px rgba(28, 25, 23, 0.08);
+        }
+
+        .card h3 {
+            color: #ea580c;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #57534e;
+            line-height: 1.7;
+        }
+
+        .reason {
+            background: #1c1917;
+            color: white;
+            padding: 30px;
+            border-radius: 26px;
+            margin-top: 22px;
+        }
+
+        .reason h3 {
+            color: #fdba74;
+            margin-bottom: 16px;
+        }
+
+        .reason ul {
+            padding-left: 22px;
+            color: #ffedd5;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            background: #140f0b;
+            color: #fed7aa;
+        }
+
+        @media(max-width: 900px) {
+
+            .hero,
+            .layout,
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .info-side {
+                position: static;
+            }
+
+            header {
+                padding: 18px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">NutriMove Expert</div>
+        <nav>
+            <a href="/" class="{% if page == 'home' %}active{% endif %}">Home</a>
+            <a href="/konsultasi" class="{% if page == 'konsultasi' %}active{% endif %}">Konsultasi</a>
+        </nav>
+    </header>
+
+    {% if page == 'home' %}
+    <section class="hero">
+        <div>
+            <span class="badge">Rule-Based Expert System</span>
+            <h1>Rekomendasi Menu dan Olahraga Harian</h1>
+            <p>
+                Sistem pakar ini membantu menentukan menu makan dan olahraga harian berdasarkan
+                tujuan, kondisi tubuh, aktivitas, waktu olahraga, dan preferensi makanan.
+            </p>
+            <a href="/konsultasi" class="btn">Mulai Konsultasi</a>
+        </div>
+
+        <div class="hero-panel">
+            <h2 class="panel-title">Apa yang dianalisis?</h2>
+
+            <div class="feature">
+                <h3>Tujuan Pengguna</h3>
+                <p>Menurunkan berat, menjaga berat, atau menaikkan massa tubuh.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Kondisi Tubuh</h3>
+                <p>Sistem membaca kondisi kurus, normal, atau berlebih sebagai dasar rekomendasi.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Preferensi Makanan</h3>
+                <p>Menu dapat disesuaikan menjadi hemat, normal, atau tinggi protein.</p>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if page == 'konsultasi' %}
+    <section class="main">
+        <div class="layout">
+
+            <aside class="info-side">
+                <h1>Konsultasi Sistem Pakar</h1>
+                <p>
+                    Isi data sesuai kondisi. Sistem akan mencocokkan jawaban dengan basis aturan IF-THEN
+                    untuk menghasilkan rekomendasi menu makan dan olahraga.
+                </p>
+
+                <div class="rule-box">
+                    <h3>Contoh Rule</h3>
+                    <ul>
+                        <li>IF tujuan turun berat AND tubuh berlebih THEN menu rendah kalori</li>
+                        <li>IF tujuan naik massa AND tubuh kurus THEN menu tinggi protein</li>
+                        <li>IF aktivitas rendah THEN olahraga dimulai dari intensitas ringan</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div>
+                <div class="form-box">
+                    <h2>Form Konsultasi</h2>
+                    <p class="sub">
+                        Pilih kondisi yang paling sesuai. Hasil akan muncul setelah tombol proses ditekan.
+                    </p>
+
+                    <form method="POST">
+                        <div class="form-grid">
+                            <div class="form-row">
+                                <label>Tujuan</label>
+                                <select name="tujuan" required>
+                                    <option value="">-- Pilih Tujuan --</option>
+                                    <option value="turun_berat">Menurunkan Berat Badan</option>
+                                    <option value="jaga_berat">Menjaga Berat Badan</option>
+                                    <option value="naik_massa">Menaikkan Massa Tubuh/Otot</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <label>Kondisi Tubuh</label>
+                                <select name="kondisi" required>
+                                    <option value="">-- Pilih Kondisi --</option>
+                                    <option value="kurus">Kurus</option>
+                                    <option value="normal">Normal</option>
+                                    <option value="berlebih">Berlebih</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <label>Aktivitas Harian</label>
+                                <select name="aktivitas" required>
+                                    <option value="">-- Pilih Aktivitas --</option>
+                                    <option value="rendah">Rendah</option>
+                                    <option value="sedang">Sedang</option>
+                                    <option value="tinggi">Tinggi</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <label>Waktu Olahraga</label>
+                                <select name="waktu" required>
+                                    <option value="">-- Pilih Waktu --</option>
+                                    <option value="sedikit">Sedikit (&lt; 20 menit)</option>
+                                    <option value="cukup">Cukup (20–45 menit)</option>
+                                    <option value="banyak">Banyak (&gt; 45 menit)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <label>Preferensi Makanan</label>
+                                <select name="preferensi" required>
+                                    <option value="">-- Pilih Preferensi --</option>
+                                    <option value="hemat">Hemat</option>
+                                    <option value="normal">Normal</option>
+                                    <option value="tinggi_protein">Tinggi Protein</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button class="btn" type="submit">Proses Rekomendasi</button>
+                    </form>
+                </div>
+
+                {% if hasil %}
+                <div class="result">
+                    <div class="result-header">
+                        <h2>{{ hasil.kategori }}</h2>
+                        <p>Hasil rekomendasi berdasarkan basis pengetahuan sistem pakar.</p>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Menu Pagi</h3>
+                            <p>{{ hasil.menu_pagi }}</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Menu Siang</h3>
+                            <p>{{ hasil.menu_siang }}</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Menu Malam</h3>
+                            <p>{{ hasil.menu_malam }}</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Olahraga Harian</h3>
+                            <p>{{ hasil.olahraga }}</p>
+                        </div>
+                    </div>
+
+                    <div class="reason">
+                        <h3>Alasan Sistem</h3>
+                        <ul>
+                            {% for item in hasil.alasan %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+    </section>
+    {% endif %}
+
+    <footer>
+        Sistem Pakar Rekomendasi Menu & Olahraga Harian
+    </footer>
+
+</body>
+
+</html>
